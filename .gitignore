@@ -7,3 +7,6 @@ target/
 *.pfx
 *.jks
 *.keystore
+*.cer
+*.crt
+*.pem
