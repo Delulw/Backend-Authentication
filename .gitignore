@@ -1,0 +1,9 @@
+target/
+.idea/
+.vscode/
+*.iml
+.env
+*.p12
+*.pfx
+*.jks
+*.keystore
