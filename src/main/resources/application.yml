@@ -2,6 +2,14 @@ spring:
   application:
     name: backend-authentication
 
+security:
+  jwt:
+    secret-base64: ${JWT_SECRET_BASE64}
+    expiration-ms: ${JWT_EXPIRATION_MS:900000}
+  auth:
+    username: ${AUTH_USERNAME}
+    password: ${AUTH_PASSWORD}
+    roles: ${AUTH_ROLES:USER}
 server:
   port: 8443
   ssl:

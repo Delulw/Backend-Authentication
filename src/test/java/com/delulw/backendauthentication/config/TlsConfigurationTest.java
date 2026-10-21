@@ -12,7 +12,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest(properties = {
         "TLS_KEYSTORE_PATH=file:./local-dev.p12",
-        "TLS_KEYSTORE_PASSWORD=test-only"
+        "TLS_KEYSTORE_PASSWORD=test-only",
+        "security.jwt.secret-base64=MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE=",
+        "security.auth.username=test-user",
+        "security.auth.password=test-password"
 })
 class TlsConfigurationTest {
 
