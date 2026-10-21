@@ -14,7 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest
+@SpringBootTest(properties = {
+        "server.ssl.enabled=false",
+        "server.ssl.key-store=classpath:application.yml",
+        "server.ssl.key-store-type=PKCS12",
+        "server.ssl.key-store-password=test-only"
+})
 @AutoConfigureMockMvc
 class SecurityConfigTest {
 
