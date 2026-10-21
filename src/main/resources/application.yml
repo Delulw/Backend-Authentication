@@ -10,3 +10,13 @@ security:
     username: ${AUTH_USERNAME}
     password: ${AUTH_PASSWORD}
     roles: ${AUTH_ROLES:USER}
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: ${TLS_KEYSTORE_PATH:file:./local-dev.p12}
+    key-store-type: PKCS12
+    key-store-password: ${TLS_KEYSTORE_PASSWORD}
+    enabled-protocols:
+      - TLSv1.2
+      - TLSv1.3

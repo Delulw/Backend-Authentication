@@ -24,7 +24,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         "security.jwt.expiration-ms=900000",
         "security.auth.username=test-user",
         "security.auth.password=test-password",
-        "security.auth.roles=USER"
+        "security.auth.roles=USER",
+        "server.ssl.enabled=false",
+        "server.ssl.key-store=classpath:application.yml",
+        "server.ssl.key-store-type=PKCS12",
+        "server.ssl.key-store-password=test-only"
 })
 @AutoConfigureMockMvc
 class SecurityConfigTest {
