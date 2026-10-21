@@ -25,3 +25,10 @@ src/
 
 Los keystores, certificados y archivos de entorno están excluidos de Git; no se
 incluyen secretos ni se activa TLS hasta configurar el certificado en una etapa posterior.
+
+## Seguridad base
+
+La configuración stateless permite `/api/auth/**`, requiere autenticación para las
+demás rutas y exige el rol `ADMIN` en `/api/admin/**`. JWT y TLS se incorporarán en
+etapas separadas. Las pruebas de seguridad verifican acceso público, autenticado,
+`401 Unauthorized` y `403 Forbidden`.
